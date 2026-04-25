@@ -12,3 +12,12 @@ A simple command-line task manager built using Python.
 ## Tech Used
 - Python
 - JSON
+## Versions
+- CLI → main.py
+- GUI → gui.py
+
+## GUI Features
+- Add task
+- Delete task
+- Mark complete (✔)
+- Live list refresh
