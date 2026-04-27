@@ -2,29 +2,32 @@ import tkinter as tk
 
 tasks = []
 
+def refresh_listbox():
+    listbox.delete(0, tk.END)
+    for t in tasks:
+        display = t["task"] + (" ✔" if t["done"] else "")
+        listbox.insert(tk.END, display)
+
 def add_task():
     task = entry.get()
     if task:
         tasks.append({"task": task, "done": False})
-        listbox.insert(tk.END, task)
         entry.delete(0, tk.END)
+        refresh_listbox()
 
 def delete_task():
     selected = listbox.curselection()
     if selected:
         index = selected[0]
-        listbox.delete(index)
         tasks.pop(index)
+        refresh_listbox()
 
 def mark_complete():
     selected = listbox.curselection()
     if selected:
         index = selected[0]
         tasks[index]["done"] = True
-
-        # Update display
-        listbox.delete(index)
-        listbox.insert(index, tasks[index]["task"] + " ✔")
+        refresh_listbox()
 
 root = tk.Tk()
 root.title("Task Manager")

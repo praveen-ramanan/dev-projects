@@ -1,23 +1,35 @@
-# Task Manager CLI
+# 📝 Task Manager (CLI + GUI)
 
-A simple command-line task manager built using Python.
+A simple Task Manager application built using Python.  
+This project started as a Command-Line Interface (CLI) app and was later upgraded to a Graphical User Interface (GUI) using Tkinter.
 
-## Features
+---
+
+## 🚀 Features
+
+### ✅ CLI Version (`main.py`)
 - Add tasks
+- View tasks
 - Delete tasks
 - Mark tasks as completed
-- View all / completed / pending tasks
 - Persistent storage using JSON
 
-## Tech Used
-- Python
-- JSON
-## Versions
-- CLI → main.py
-- GUI → gui.py
+---
 
-## GUI Features
-- Add task
-- Delete task
-- Mark complete (✔)
-- Live list refresh
+### 🖥️ GUI Version (`gui.py`)
+- Add tasks using input field
+- Delete selected task
+- Mark tasks as completed (✔)
+- Real-time task display
+- Smooth UI interaction
+
+---
+
+## 🛠️ Tech Stack
+- Python
+- Tkinter (GUI)
+- JSON (data storage)
+
+---
+
+## 📁 Project Structure
